@@ -59,9 +59,8 @@ _Availability:_ Es können hier die Regeln von Date Nummer 3 und Nummer 7 verwen
 _Tolerance of Network Partitions:_ Es können Daten in Netzen verloren gehen oder verspätet zugestellt werden. Laut [1] soll das Gesamtsystem tolerant mit diesen Problemen umgehen. Ein System sollte bei Konsistenzverletzungen nicht ausfallen oder komplett zurückgesetzt werden müssen.
 
 Da nur zwei von drei genannten Eigenschaften vollständig realisiert werden können, sind in Abbildung die Schnittmengen der drei Eigenschaften dargestellt.
+<img src="images/CAP-Schicker.png" width=250>
 
-![CAP Schnittmenge nach Schicker][logo1]
-[logo1]:Verteilte Datenbanken_DDBMS/images/CAP-Schicker.png "CAP Schnittmenge nach Schicker"
 
 
 
