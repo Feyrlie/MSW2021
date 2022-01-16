@@ -1,4 +1,4 @@
-#Microsoft SQL-Server
+# Microsoft SQL-Server
 
 Microsoft SQL-Server erschien 1989. Microsoft arbeitet mit der Sybase zusammen und entwickelte den SQL-Server für relationale Datenbanken. Mit dem Release von SQL-Server 7.0 im Jahr 1999 löst sich Microsoft von der ursprünglichen Codebasis aus der Kooperation mit Sybase. Mit der SQL-Server Version 2017 wurden auch Linux Betriebssysteme unterstützt. Die derzeit aktuelle Version ist der SQL-Server 2019. In Kürze soll die Version SQL-Server 2022 erscheinen. SQL Server wird kommerziell eingesetzt und verfügt, wie viele Microsoft Produkte, über ein eigenes Lizenzierungsmodell. In Bezug auf verteilte Datenbanken bietet SQL-Server folgende Möglichkeiten:
 
@@ -10,10 +10,10 @@ Microsoft SQL-Server erschien 1989. Microsoft arbeitet mit der Sybase zusammen u
 
 In den nachfolgenden Abschnitten wird auf die einzelnen Möglichkeiten detaillierter eingegangen.
 
-##(Hoch-) Verfügbarkeit mit Cluster
+## (Hoch-) Verfügbarkeit mit Cluster
 Laut [21] wird unter einem SQL-Cluster eine Sammlung von zwei oder mehr physikalischen Servern, den sogenannten Nodes (engl. Knoten), verstanden. Diese Nodes sind per LAN miteinander verbunden, hosten eine SQL-Server Instanz und haben den gleichen Zugriff auf einen gemeinsamen Speicher. Das Clustern von SQL-Servern bietet hohe Verfügbarkeit. Im Falle eines Ausfalls (zum Beispiel der Server Hardware) von einem Node bzw. SQL-Server übernimmt ein anderer SQL-Server die Aufgaben. Man unterscheidet bei Microsoft zwischen zwei verschiedenen Cluster Konfiguration. Man kann zwischen Active/Active oder Active/Passive Clustern wählen.
 
-###Active/Active
+### Active/Active
 Die schematische Darstellung der Active/Active Cluster Konfiguration ist in der Abbildung dargestellt.
 
 <p align="center">
@@ -23,7 +23,7 @@ Die schematische Darstellung der Active/Active Cluster Konfiguration ist in der 
 
 Aus der Abbildung 17 geht hervor, dass unter der Active/Active Cluster Konfiguration verstanden wird, dass SQL-Server auf beiden Nodes des Zwei-Wege Clusters laufen. Jede Kopie des SQL-Servers arbeitet unabhängig und der Benutzer sieht zwei verschiedene SQL-Server. Sobald ein Server im Cluster-Verband ausfällt, übernimmt ein anderer Server die Aufgaben des ausgefallenen Servers. Somit findet jedoch keine Lastverteilung statt. In einem Active/Active Cluster muss der Server ausreichend dimensioniert sein. Bei nicht ausreichender Dimensionierung kann es bei einem Server Ausfall zu Performance Einbußen kommen.
 
-###Active/Passive
+### Active/Passive
 Die Active/Passive Cluster Konfiguration ist in der Abbildung 18 schematisch dargestellt.
 
 <p align="center">
@@ -35,7 +35,7 @@ Unter einer Active/Passiv Konfiguration wird ein SQL-Server Clusterverbund bezei
 
 Abschließend lässt sich sagen, dass sich SQL-Server Clustering nur für die Hochverfügbarkeit und somit Ausfallsicherheit verwenden lässt. Für Load Balancing ist Clustering nicht geeignet. Hierzu sollte man die verschiedenen Replikationstypen in Betracht ziehen.
 
-###Fail-Over Cluster
+### Fail-Over Cluster
 Laut [22] handelt es sich beim Windows Server-Failovercluster (WSFC) eine Gruppe unabhängiger Server, die zur Steigerung der Verfügbarkeit von Anwendungen und Diensten zusammenarbeiten. Der SQL Server nutzt WSFC-Dienste und WSFC-Funktionen, um Always On-Verfügbarkeitsgruppen und SQL Server Failoverclusterinstanzen zu unterstützen. In der Abbildung ist die Gesamt-Schematik von dem Windows Server Failover Cluster dargestellt.
 
 <p align="center">
@@ -50,13 +50,13 @@ Wie in der Abbildung dargestellt, muss für eine erfolgreiche SQL-Server AlwaysO
 •	Database level: Eine Verfügbarkeitsgruppe (siehe Abschnitt Alway-On Availablilty groups) besteht aus einem primären Replikat und einem bis vier sekundären Replikaten. Jedes Replikat wird von einer Instanz von SQL Server (FCI oder nicht-FCI) auf einem anderen Knoten des WSFC-Clusters gehostet.
 •	Client connectivity: Datenbank-Client-Anwendungen können sich direkt mit dem Netzwerknamen einer SQL Server-Instanz oder mit einem virtuellen Netzwerknamen (VNN) verbinden, der über einen availability group listener gebunden ist. Der VNN wird dann Verbindungsanfragen direkt an die SQL-Server Instanz und das Datenbank Replikat weiterleiten.
 
-##Always On
+## Always On
 SQL Server Always On ist eine Lösung für Hochverfügbarkeit und Notfallwiederherstellung. Always On-Komponenten stellen eine integrierte, flexible Lösung bereit. Diese Lösung erhöht die Anwendungsverfügbarkeit und vereinfacht die Verwaltung von der Hochverfügbarkeit.
 
-##Always On-Availablilty Groups
+## Always On-Availablilty Groups
 Mit SQL-Server 2012 wurden Always On Availability Groups (engl. Verfügbarkeitsgruppen) eingeführt. Hierbei handelt es sich um eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, als alternative zur Datenbankspieglung. Laut [24] unterstützt eine Verfügbarkeitsgruppe eine Failoverumgebung (siehe Cluster) für einen diskreten Satz von Benutzerdatenbanken, sogenannte Verfügbarkeitsdatenbanken), die zusammen ein Failover ausführen. Hierbei unterstützt diese Gruppe einen Satz primärer Datenbanken mit Lese-Schreibzugriff. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats (siehe Kapitel Replication) ein Failover aus. Ein Failover wird nicht durch Datenbankprobleme verursacht.
 
-##Replication
+## Replication
 Laut [5] handelt es sich bei der Replikation um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere. Anschließend findet eine Synchronisation zwischen den Datenbanken statt, um die Konsistenz der Daten sicherzustellen. SQL-Server bietet sechs Replikationstypen (Transaktionsreplikation, Merge Replikation, Momentaufnahmen Replikation, Peer-zu-Peer, Bidirektional und aktualisierbare Abonnements) an. Mit der Replication wird somit die zweite Regel für CA-Systeme „Konsistenz“ beachtet. In der nachfolgenden Abbildung ist das Replikationsveröffentlichungsmodell nach Microsoft dargestellt.
 
 <p align="center">
@@ -66,7 +66,7 @@ Laut [5] handelt es sich bei der Replikation um eine Reihe von Technologien zum 
 
 Unter deinem Article versteht man ein Objekt, welches repliziert werden kann. Ein Article kann eine Datenbanktabelle, ein View, eine Store Procedure oder eine benutzerdefinierte Funktionen sein. Wie in der Abbildung dargestellt, versteht man unter einer Publikation eine Sammlung verschiedener Artikel, die bei dem Publisher existieren. Unter einem Publisher versteht man die SQL-Server Instanz, die Publikationen mit diversen Articles enthält, die an die sogenannten Subscriber verteilt werden sollen. Ein Subscriber erhält von einem oder mehreren Publishern Article. Eine zentrale Verteilstelle nimmt dabei der Replication Agents ein. Der sogenannte Distributor sammelt alle neuen Article von den Publishern und verteilt diese an die Subscriber.
 
-###Replikationstypen
+### Replikationstypen
 In dem folgenden Abschnitt werden die verschiedenen Replikationstypen genauer beschrieben. Wie erwähnt bietet SQL-Server sechs verschiedene Replikationstypen zur Auswahl an. 
 1.	Transaktionsreplikation: Änderungen auf dem Publisher werden an Subscriber übermittelt, sobald sie auftreten. Datenänderungen werden somit direkt in derselben Reihenfolge und mit denselben Transaktionsgrenzen angewendet, wie bei dem Publisher. [8]
 2.	Merge Replikation: Auf beiden Seiten (Publisher und Subscriber) können Daten geändert werden. Die Änderungen werden mit Hilfe von Triggern nachverfolgt. Sobald eine Verbindung mit dem Netzwerk vorhanden ist, nimmt der Subscriber eine Synchronisation mit dem Publisher aus und tauscht alle Zeilen aus, die sich seit der letzten Synchronisierung sowohl beim Publisher als auch beim Subscriber geändert haben. 
@@ -93,7 +93,7 @@ Als zweiten Typ wird die Peer-zu-Peer Replikation genauer betrachtet. Laut [26] 
 <em> Abbildung 21 - Peer-zu-Peer Topologie [26]</em>
 </p>
 
-##Fazit
+## Fazit
 Wie in Kapitel CA-Systeme beschrieben, sind Hochverfügbarkeit und Konsistenz die beiden Hauptmerkmale für diese Art der verteilten Datenbanken. Microsoft SQL Server bietet eine Vielzahl von Lösungen um Hochverfügbarkeit von Datenbanken zu gewährleisten. Hierbei liegt das Hauptaugenmerk auf der Hochverfügbarkeit und Ausfallsicherheit von SQL-Server Instanzen in verschiedenen Modi. Im Zusammenspiel mit weiteren Microsoft Produkten (wie dem Microsoft Server) wird der Einsatz von SQL-Server effektiv. In Bezug auf verteilte Datenbanken bietet der Microsoft Replikationsmodelle unter anderem mit verteilten Transaktionen an.
 
 
