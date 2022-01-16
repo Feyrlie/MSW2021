@@ -61,7 +61,7 @@ _Tolerance of Network Partitions:_ Es können Daten in Netzen verloren gehen ode
 Da nur zwei von drei genannten Eigenschaften vollständig realisiert werden können, sind in Abbildung die Schnittmengen der drei Eigenschaften dargestellt.
 
 ![CAP Schnittmenge nach Schicker][logo1]
-[logo1]:https://github.com/Feyrlie/MSW2021/blob/2057adad2fa24a2a3c05d102868ef6203182a7b0/Demo/Add%20File.png "Title"
+[logo1]:Verteilte Datenbanken_DDBMS/images/CAP-Schicker.png "CAP Schnittmenge nach Schicker"
 
 
 
