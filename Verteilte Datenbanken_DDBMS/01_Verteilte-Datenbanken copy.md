@@ -59,8 +59,14 @@ _Availability:_ Es können hier die Regeln von Date Nummer 3 und Nummer 7 verwen
 _Tolerance of Network Partitions:_ Es können Daten in Netzen verloren gehen oder verspätet zugestellt werden. Laut [1] soll das Gesamtsystem tolerant mit diesen Problemen umgehen. Ein System sollte bei Konsistenzverletzungen nicht ausfallen oder komplett zurückgesetzt werden müssen.
 
 Da nur zwei von drei genannten Eigenschaften vollständig realisiert werden können, sind in Abbildung die Schnittmengen der drei Eigenschaften dargestellt.
+
 <img src="images/CAP-Schicker.png" width=250>
 
+### CA-Systeme
+Bei relationalen Datenbanksystemen findet häufig das CA-System Anwendung. Bei dem CA-System werden nur Konsistenz und Verfügbarkeit verwendet. Schon seit mehr als 20 Jahren wird zum Beispiel das Zwei-Phasen-Commit-Protokoll in verteilten Datenbanken mit großem Erfolg eingesetzt.[1] Auf PA und CP-Systeme wird in dieser Auswertung nicht weiter eingegangen, da sich ausschließlich mit Relationalen Datenbanken befasst wird. 
+
+## Zwei-Phasen-Commit-Protokoll
+Laut [1] ist es in hochverfügbaren verteilten Systemen schwer die zeitnahe Konsistenz zu garantieren. Seit vielen Jahren wird in relationalen Datenbanken das zwei-Phasen-Commit-Protokoll verwendet. Mit Hilfe von diesem Protokoll kann die Konsistenz eines Systems auch über mehrere Rechner hinweg sichergestellt werden. In einer relationalen Datenbank entspricht das Zwei-Phasen-Commit Protokoll einem CA-System (siehe Abschnitt CA-System). Es kann somit hohe Verfügbarkeit und zeitnahe Konsistenz garantiert werden. Häufig findet dieses Protokoll in betriebswirtschaftlichen Anwendungen sein Einsatzgebiet (Ein- und Verkauf, Produktion oder in Buchungs- und Abrechnungssystemen). XOpen/DTD ist als Standard für Zwei Phasen-Commit-Protokoll verwendet. Beim Zwei-Phasen-Commit Protokoll werden zwei Phasen ausgeführt. Die Wahlphase und die Entscheidungsphase. In der Abbildung X ist das Commit Protokoll laut [4] grafisch dargestellt. 
 
 
 
