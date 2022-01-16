@@ -1,10 +1,12 @@
 # Verteilte Datenbanken
+
 Gemäß [1] wird man hauptsächlich mit zwei Fragen konfrontiert, wenn Daten auf mehrere Rechner verteilt werden oder in die Cloud gelegt werden sollen.
 
 1.	 Worin liegt der Vorteil der getrennten Datenhaltung gegenüber der zentralen Speicherung?
 2.	 Wie funktioniert die Verwaltung verteilter Datenbanken bzw. inwieweit muss der Datenbankbenutzer ein Umstieg auf verteilte Systeme umdenken? [1]
 
 ## Zwölf Regeln für verteilte Datenbank Systeme (DBS)
+
 Die zwölf „Regeln“ für Verteilte DBS nach CJ Date [2] stellen die Anforderungen an verteilte Datenbanksysteme dar. Diese Regeln sind in Tabelle x zusammengefasst:
 
 Nummer | Regel
@@ -51,6 +53,7 @@ Zusätzlich wird auch Leistungstransparenz gefordert. Die Kommunikationsverzöge
 Schlussendlich müssen Kompromisse geschlossen werden, um das bestmögliche aus den Regeln zu verwenden. In dem nachfolgenden Abschnitt wird auf Verfügbarkeit, sicheren Transaktionsbetrieb und die Verteilung der Daten genauer eingegangen.
 
 ## CAP Theorem
+
 Im Jahr 2000 stellte E. Brewer das CAP Theorem auf. Die Begriffe Consistency, Availability, Tolerance of Network Partitions bilden die Abkürzung CAP. Dieses Theorem besagt, dass Konsistenz (Consistency), Verfügbarkeit (Availability) und Ausfalltoleranz (Tolerance of Network Partitions) in verteilten Datenbanken nicht gleichzeitig erfüllt werden können. Wie bereits bei den zwölf Regeln nach CJ Date deutlich wurde, können nicht alle Regeln erfüllt werden. Das CAP Theorem sagt sogar aus, dass nur zwei von den drei genannten Eigenschaften (Consistency, Availablity, Tolerance of Network Partitions) vollständig realisiert werden können.
 
 _Consistency_: Zur gleichen Zeit müssen alle mehrfach gehaltenen gültigen Daten übereinstimmen. Damit die Daten gleichzeitig aktualisiert werden können, wird Atomarität aus dem ACID-Modell benötigt. Die Konsistenz ist in einem Transaktionsbetrieb eine zwingende Vorrausetzung. In der achten Regel von CJ Date (siehe Kapitel Zwölf Regeln von Date) festgelegt. [1]
