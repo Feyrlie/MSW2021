@@ -1,3 +1,4 @@
+<a name="verteilte Datenbanken"></a>
 # Verteilte Datenbanken
 
 Gemäß [1] wird man hauptsächlich mit zwei Fragen konfrontiert, wenn Daten auf mehrere Rechner verteilt werden oder in die Cloud gelegt werden sollen.
@@ -5,6 +6,7 @@ Gemäß [1] wird man hauptsächlich mit zwei Fragen konfrontiert, wenn Daten auf
 1.	 Worin liegt der Vorteil der getrennten Datenhaltung gegenüber der zentralen Speicherung?
 2.	 Wie funktioniert die Verwaltung verteilter Datenbanken bzw. inwieweit muss der Datenbankbenutzer ein Umstieg auf verteilte Systeme umdenken? [1]
 
+<a name="zwölf Regeln"></a>
 ## Zwölf Regeln für verteilte Datenbank Systeme (DBS)
 
 Die zwölf „Regeln“ für Verteilte DBS nach CJ Date [2] stellen die Anforderungen an verteilte Datenbanksysteme dar. Diese Regeln sind in Tabelle x zusammengefasst:
