@@ -1,15 +1,15 @@
-#Vergleich der Systeme
+# Vergleich der Systeme
 
 Die aktuelle Marktsituation: Oracle (37% Marktanteil) und Microsoft (29% Marktanteil) dominieren das Angebot der RDMS [4]. Im Abschlussbericht der Verwendung der Datenbankmanagementsysteme (DBMS) in der deutschen Bundesverwaltung wurden 55% Anteile bei Oracle und 24% bei Microsoft identifiziert [5]. Im Weiteren werden die Lösungsansätze zur Hochverfügbarkeit und Skalierung der marktbeherrschenden DBMS von Oracle und Microsoft betrachtet. Die nachfolgende Betrachtung erfolgt gemäß den Regeln für CA-Systeme. Oracle und Microsoft wurden nach ihren Funktionalitäten für Verfügbarkeit und Konsistenz untersucht. Als erstes erfolgt die Analyse mit Oracle und dann die Analyse mit Microsoft SQL Server. Abschließend werden beide Anbieter mit ihren Funktionalitäten gegenübergestellt und verglichen.
 
-##Oracle
+## Oracle
 „Auch Oracle-Datenbanken bieten Hochverfügbarkeit. Stand-by-Datenbanken sorgen für Ausfallsicherheit auch über mehrere Rechenzentren und große Distanzen. Mit Oracle Real Application Clusters (RAC) lassen sich nicht nur äußerst geringe Ausfallzeiten erreichen, die Technik adressiert auch das Thema Skalierung. Auf RAC und ASM (Automatic Storage Management) aufbauend brachte Oracle eine eigene Appliance heraus: Oracle Exadata. Das Flaggschiff ist horizontal skalierbar und basiert auf intelligenten Storage-Servern, High-Performance InfiniBand-Fabrics und Flash-Technologie.“ [6] Hier ist nur kurz anzumerken, dass auch beliebte MySQL-Datenbank im Rahmen des Zukaufs von Sun Microsystems seit dem Jahr 2010 der Firma Oracle gehört. Diese Datenbanklösung wird jedoch hier nicht untersucht.
 
 Im Oracle Sprachgebrauch wird Datenbank als verwendete Dateien, welche die Information persistent speichern, und Instanz als eine Umgebung durch Prozesse und Speicher, welche Zugriff auf die Informationen ermöglichen, verwendet. Die Dateien in einem Produktivsystem werden in der Regel mit Hardwareredundanz im RAID (Redundant Array of Independent Disks) organisiert. Öfter werden die Speicher zentral als SAN (Storage Area Network) und NAS (Network Attached Storage) organisiert. Die Version 21c ist ein Innovations-Release, welches den Kunden die Möglichkeit bietet, mit neuen und verbesserten Funktionen für Workload-Anwendungsfällen und Anwendungen schneller von Innovationen zu profitieren. Die Version löst die vorherige Innovationsversion 20c ab.
 
 Dagegen ist die Version 19c die aktuelle Long Term Release, die bis zum März 2026 unterstützt wird. Die Version 22c wird die nachfolgende Long Term Version werden. Oracle hat die Versionierung mit der Version 2 im Jahr 1979 begonnen und bis 12 nummeriert. Ab Version 8(i) wurden je zwei Releases rausgegeben. Die Version 12c war die letzte mit zwei Releases [7] . Die Buchstaben hinter der Nummer stehen für i wie Internet, g/G wie Grid Computing [8] und c für Cloud. Ab 2018 werden die Versionen nach Jahren (18c – 22c) nummeriert.
 
-###Data Guard
+### Data Guard
 „Oracle Data Guard ist die effektivste Lösung, die heute verfügbar ist, um das Kernstück eines jeden Unternehmens – seine Daten – zu schützen und sie rund um die Uhr verfügbar zu machen, selbst im Falle von Katastrophen und anderen Unglücken.“ [9]
 
 <p align="center">
@@ -52,7 +52,7 @@ Oracle Data Guard bietet drei verschiedene Datenschutzmodi. In manchen Situation
 
 Das Client-Failover umfasst die Fehlerbenachrichtigung, die Bereinigung veralteter Verbindungen und die transparente Wiederverbindung mit der neuen primären Datenbank. Die Möglichkeiten des Data Guards in Verbindung mit dem Client-Failover erlauben die HA-Szenarien sowohl für Datenbank-Server als auch für die verbundenen Clients und Applikationen.
 
-###Real Applikation Cluster (RAC)
+### Real Applikation Cluster (RAC)
 
 RAC adressiert seit der Version 9i im Jahr 2001 zwei Themen: Hochverfügbarkeit und Skalierbarkeit.
 Nur auf einem Server laufende Instanz, stellt die SPOF (Single Point of Failure) dar (s. Abb. 7).
@@ -105,7 +105,7 @@ Application Continuity verwendet automatisch im Hintergrund TG-Funktionalität, 
 Funktionen, welche im Wiederholungsfall neue Werte, wie z.B. SYSDATE oder NEXTVAL bei Sequenzen, erzeugen, liefern bei einem Replay den Wert des ersten Aufrufs wieder.
 Der Einsatz von Connection-Pools ist für Application Continuity jedoch erforderlich. Transparent Application Continuity (ab 18c) funktioniert auch ohne Connection-Pools, auch wenn diese weiterhin empfohlen sind. Application Continuity wird in jeder neuen Datanbankversion weiterentwickelt – auch in der neuen Version 21c [17].
 
-###Hochverfügbarkeit mit RAC
+### Hochverfügbarkeit mit RAC
 Wie bereits erläutert, können einige SPOF bereits durch RAC-Konfiguration minimiert werden. Doch was passiert, wenn die Stromversorgung am Serverstandort wegfällt? Die Netzanbindung zu den Clients aus Rechenzentrum kann u.a. dadurch nicht mehr erfolgen. Auch ein möglicher Brand kann zum Ausfall führen. In einigen Dokumenten wird auf verschiedene Brandabschnitte hingewiesen, welche ggf. im Brandfall weiterlaufen können. Leider sind die Brandabschnitte in der Praxis doch nicht so weit räumlich voneinander getrennt, so dass im Brandfall auch dort die Stromversorgung aus Sicherheitsgründen ausgeschaltet wird. Auch eine Wartung an den Strom/USV-Anlagen kann zur vollständigen Stromabschaltung führen.
 Für diese Fälle hat Oracle MAA (Maximum Availability Architecture) definiert (s. Abb. 13). Die vorher beschriebene Funktionalität des Oracle Data Guard in Verbindung mit einen und mehreren weiteren Standorten bilden die MAA.
 
@@ -128,7 +128,7 @@ Oracle Maximum Availability Architecture (MAA) ist eine Reihe von Best Practices
 <em> Abbildung 15 - Umfangreiche Oracle MAA (Maximum Availability Architecture) [18]  </em>
 </p>
 
-###Exadata
+### Exadata
 Oracle hat seit Oktober 2008 eine eigne On-Premise-Lösung für Unternehmen mit kombinierter Hard- und Software im Angebot. Die Konfiguration war in der Version X2 und X3 starr, momentan kann in der Version X9M-2 bis zu 22 Datenbankservern, bis zu 19 Storage Server oder Kombinationen davon erworben werden [19]. Neben der Basis Konfiguration mit 2 Datenbankservern und 3 Storage Servern und netto Festplattenkapazität von 648 TB bestehen die Möglichkeiten der Erweiterung mit weiteren Servern und Speicher (RAM & ePCI). Mit der entsprechenden Softwarelizensierung ermöglicht Exadata Database Machine (s. Abb. 16) alle Arten von Datenbank-Workloads, einschließlich Online Transaction Processing (OLTP), Data Warehousing und eine Konsolidierung gemischter Workloads. Exadata Database Machine betreibt und schützt die wichtigsten Datenbanken und ist die ideale Grundlage für eine konsolidierte Datenbank-Cloud [19]. Diese Lösung sorgt für sehr gute Abstimmung der Hardware, welche nur mit sehr viel Zeit und Wissen zusammengestellt werden kann. Auch die Effekte der möglichen Inkompatibilität zwischen den einzelnen Herstellern kann damit ausgeschlossen werden.
 
 <p align="center">
