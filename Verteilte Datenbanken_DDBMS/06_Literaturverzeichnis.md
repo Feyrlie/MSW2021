@@ -2,14 +2,23 @@
 
 Literaturverzeichnis
 [1]	Schicker, E (2017): Datenbanken und SQL. Eine praxisorientierte Einführung mit Anwendungen in Oracle, SQL Server und MySQL. 5. Auflage. Springer Vieweg, Wiesbaden.
+
 [2]	Date, CJ (1991): An introduction to database systems. 5. Auflage. Addison-Wesley, Reading, Mass.
+
 [3]	Rahm, E (1994): Mehrrechner-Datenbanksysteme. Grundlagen der verteilten und parallelen Datenbankverarbeitung. 1. Auflage. Addison-Wesley, Bonn, Paris ^^.
+
 [4]	Rahm, E, Saake, G, Sattler, K-U (2015): Verteiltes und paralleles Datenmanagement. Von verteilten Datenbanken zu Big Data und Cloud. Springer Vieweg, Berlin, Heidelberg.
+
 [5]	Donner, A (2006): Hardware bleibt Hauptursache von Server-Ausfällen. https://www.ip-insider.de/hardware-bleibt-hauptursache-von-server-ausfaellen-a-49554/. Abgerufen am 29.12.2021.
+
 [6]	Held, A (2019): Von SQL zu NoSQL und NewSQL: Aktuelle Datenbanktechnologien im Überblick. https://www.heise.de/hintergrund/Von-SQL-zu-NoSQL-und-NewSQL-aktuelle-Datenbanktechnologien-im-Ueberblick-4456160.html.
+
 [7]	Wikipedia (2021): Oracle Database. https://en.wikipedia.org/w/index.php?title=Oracle_Database&oldid=1060284598. Abgerufen am 30.12.2021.
+
 [8]	ORACLE (2006): Oracle Database Online-Dokumentation 11g Release 1 (11.1). https://docs.oracle.com/cd/B28359_01/nav/portal_16.htm. Abgerufen am 30.12.2021.
+
 [9]	Oracle Help Center (2021): Concepts and Administration. https://docs.oracle.com/en/database/oracle/oracle-database/21/sbydb/index.html. Abgerufen am 30.12.2021.
+
 [10]	Fröhlich, L (2021): Oracle 19c/20c. Das umfassende Praxis-Handbuch. 1. Auflage. mitp, Frechen.
 [11]	Hawkins, G: Oracle Active Data Guard: Best Practices and New Features Deep Dive.
 [12]	Appelbaum, R: Einfach erklärt: RAC Grundlagen für Dummies. DOAG.
