@@ -1,5 +1,5 @@
 # Vergleich führenden kommerzieller RDBMS-Lösungen im Hinblick auf verteilte Datenbank-Systeme an Beispiel von Oracle und Microsoft
----
+
 
 _Fach_: Datenbanktechnologien
 
@@ -7,7 +7,7 @@ _Autoren: Daniel Merins und Tina Koppermann_
 
 ---
 
-Inhalt
+**Inhalt**
 
 1. [Einleitung](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
 
