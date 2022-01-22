@@ -19,5 +19,5 @@ _Autoren: Daniel Merins und Tina Koppermann_
 
 3. [Zusammenfassung](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
 
-4. [Literaturverzeichnis](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
+4. [Literaturverzeichnis](01_Verteilte-Datenbanken.md)
 
