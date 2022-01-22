@@ -1,23 +1,25 @@
 # Vergleich führenden kommerzieller RDBMS-Lösungen im Hinblick auf verteilte Datenbank-Systeme an Beispiel von Oracle und Microsoft
 
 
-_Fach_: Datenbanktechnologien
+Fach: Datenbanktechnologien
 
-_Autoren: Daniel Merins und Tina Koppermann_
+Autoren: Daniel Merins und Tina Koppermann
+
+Wintersemester 21/22
 
 ---
 
 **Inhalt**
 
-1. [Einleitung](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
+1. [Einleitung](01_Einleitung.md)
 
-2. [Vergleich der Systeme](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
+2. [Vergleich der Systeme](02_Vergleich-der-Systeme.md)
 
-    2.1 [Oracle](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
+    2.1 [Oracle](02_Vergleich-der-Systeme.md)
   
-    2.2 [Microsoft SQL](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
+    2.2 [Microsoft SQL](04_SQL.md)
 
-3. [Zusammenfassung](https://github.com/Feyrlie/MSW2021/blob/23aeb5e1b8b4cb4feb27d45b3ba4fe4ed007bde8/Verteilte%20Datenbanken_DDBMS/01_Verteilte-Datenbanken.md)
+3. [Zusammenfassung](05_Zusammenfassung.md)
 
 4. [Literaturverzeichnis](06_Literaturverzeichnis.md)
 
